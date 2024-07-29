@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: arial,sans_serif;
+    background:linear-gradient(to right,#ff7e5f,#feb47b);
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff7e5f;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    width: 600px;
+    margin-bottom: 20px; 
+
+
+}
+.scoreboard{
+   display: flex;    
+   justify-content: space-between;
+   width: 350px;
+   font-size:1.2rem ;
+   color: #ffffff;
+   margin-right: 50px;
+
+}
+.game-mode{
+    display: flex;
+    align-items: center;
+    font-size:1.2rem ;
+   color: #ffffff;
+
+
+}
+.game-mode label {
+    margin-left:50px ;
+    display: flex;
+    align-items: center;
+
+}
+.game-mode select{
+    padding: 5px;
+    font-size: 1rem;
+    border:2px solid #ff7e5f;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #ff7e5f;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.board{
+    display: grid;
+    grid-template-columns:repeat(3,100px) ;
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px ;
+    margin-bottom:20px ;
+
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.cell:hover{
+    background-color: #ff7e5f;
+    transform:scale(1.1) ;
+}
+.cell[data-player="X"]{
+    color: #567209;
+    font-family:cursive;
+}
+.cell[data-player="O"]{
+    color: #793705;
+    font-family: cursive;
+}
+button{
+    padding:10px 20px;
+    font-size:1.2rem ;
+    cursor: pointer;
+    background-color: #feb47b;
+    border:none ;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover{
+    background-color: #ff7e5f;
+    transform: scale(1.1);
+}
+button:active{
+    background-color: #feb47b;
+}
